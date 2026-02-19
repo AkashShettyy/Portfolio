@@ -4,119 +4,187 @@
     <title>Akash N | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <nav>
-      <h2>Akash</h2>
+      <h2>Akash N</h2>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-      <h1>Hi, I'm <span>Akash N</span></h1>
-      <p>
-        Full Stack Developer building secure and scalable web applications using
-        React, Node.js and Java-based backend technologies.
-      </p>
-
-      <div class="hero-buttons">
-        <button>Download Resume</button>
-        <button class="secondary">Contact Me</button>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Software Developer Apprentice at Commonwealth Bank of Australia.
-        I build database-driven web applications using React, Node.js and
-        MongoDB. I have experience implementing authentication systems, REST
-        APIs and role-based access control for real-world workflow applications.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-
-      <div class="skills-container">
-        <p><strong>Languages:</strong> Java, JavaScript, C, Python (basic)</p>
-        <p><strong>Frontend:</strong> HTML, CSS, React.js</p>
-        <p><strong>Backend:</strong> Node.js, Express.js, Spring Boot</p>
-        <p><strong>Database:</strong> MongoDB, MySQL</p>
-        <p><strong>Tools:</strong> Git, GitHub, Postman</p>
+      <div class="container">
+        <h1>Hi, I'm <span>Akash N</span></h1>
         <p>
-          <strong>Concepts:</strong> REST APIs, Authentication, MVC, OOP, Data
-          Structures
+          Software Developer Apprentice building secure, scalable full-stack
+          applications using React, Node.js and Spring Boot.
         </p>
-      </div>
-    </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project-container">
-        <div class="project-card">
-          <h3>Doctor Appointment System</h3>
-          <p>
-            Full-stack system with multi-role authentication, scheduling
-            workflows and real-time doctor availability using React, Node.js and
-            MongoDB.
-          </p>
-          <a
-            href="https://github.com/AkashShettyy/DoctorAppointmentSystem.git"
-            target="_blank"
-          >
-            <button>View Code</button>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <h3>Smart Care Assistant</h3>
-          <p>
-            Secure patient management platform with JWT authentication, REST
-            APIs, Cloudinary integration and dashboard-based workflows.
-          </p>
-          <a
-            href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
-            target="_blank"
-          >
-            <button>View Code</button>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <h3>Placement Management System</h3>
-          <p>
-            Spring Boot application with secure login, CRUD APIs, certificate
-            verification and audit logging using MySQL.
-          </p>
-          <a
-            href="https://github.com/AkashShettyy/Placement_Management.git"
-            target="_blank"
-          >
-            <button>View Code</button>
-          </a>
+        <div class="hero-buttons">
+          <a href="#projects"><button>View Projects</button></a>
+          <a href="#contact"><button class="secondary">Contact Me</button></a>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-box">
+            <p>
+              I am a Full Stack Developer and Software Developer Apprentice at
+              Commonwealth Bank of Australia. I build secure and database-driven
+              applications with authentication, REST APIs and role-based access.
+            </p>
+          </div>
+
+          <div class="about-box">
+            <p>
+              Passionate about backend architecture and scalable systems. Strong
+              foundation in Data Structures, OOP and clean code practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
-      <p>
-        Software Developer Apprentice at Commonwealth Bank of Australia (Jan
-        2026 – Present). Gaining experience in development workflows,
-        application architecture, debugging strategies and version control in a
-        real software team environment.
-      </p>
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="about-box">
+          <p>
+            Software Developer Apprentice at Commonwealth Bank of Australia (Jan
+            2026 – Present). Working with development workflows, debugging
+            strategies, version control and real-world application architecture.
+          </p>
+        </div>
+      </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">Java</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">React.js</div>
+          <div class="skill-card">Node.js</div>
+          <div class="skill-card">Spring Boot</div>
+          <div class="skill-card">MongoDB</div>
+          <div class="skill-card">MySQL</div>
+          <div class="skill-card">REST APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Doctor Appointment System</h3>
+            <p>
+              Multi-role full-stack application with authentication and
+              real-time scheduling built using React, Node.js and MongoDB.
+            </p>
+            <a
+              href="https://github.com/AkashShettyy/DoctorAppointmentSystem.git"
+              target="_blank"
+            >
+              <button>View Code</button>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Smart Care Assistant</h3>
+            <p>
+              Secure patient management platform with JWT authentication and
+              REST APIs.
+            </p>
+            <a
+              href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
+              target="_blank"
+            >
+              <button>View Code</button>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Placement Management System</h3>
+            <p>
+              Spring Boot system with secure login, CRUD APIs and certificate
+              verification.
+            </p>
+            <a
+              href="https://github.com/AkashShettyy/Placement_Management.git"
+              target="_blank"
+            >
+              <button>View Code</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: akashanand2204@gmail.com</p>
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <a href="mailto:akashanand2204@gmail.com" class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p>akashanand2204@gmail.com</p>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/AkashShettyy"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon">💻</div>
+            <div>
+              <h3>GitHub</h3>
+              <p>github.com/AkashShettyy</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/akash-n-729a6b2b1/"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon">🔗</div>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Connect with me</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
   </body>
 </html>

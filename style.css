@@ -58,6 +58,11 @@ nav a:hover {
   color: #38bdf8;
 }
 
+nav a.active {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
 /* ===== CONTAINER ===== */
 .container {
   max-width: 1100px;

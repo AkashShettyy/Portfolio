@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
 
   <body>
@@ -35,8 +36,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#projects"><button>View Projects</button></a>
-          <a href="#contact"><button class="secondary">Contact Me</button></a>
+          <a href="#projects"><button><i class="fas fa-code"></i> View Projects</button></a>
+          <a href="#contact"><button class="secondary"><i class="fas fa-envelope"></i> Contact Me</button></a>
         </div>
       </div>
     </section>
@@ -48,6 +49,7 @@
 
         <div class="about-grid">
           <div class="about-box">
+            <div class="about-icon">👨‍💻</div>
             <h3>Profile</h3>
             <p>
               Software Developer Apprentice building secure and scalable
@@ -56,12 +58,13 @@
           </div>
 
           <div class="about-box">
+            <div class="about-icon">🎯</div>
             <h3>Core Focus</h3>
             <ul class="about-list">
-              <li>Backend Architecture & REST APIs</li>
-              <li>Authentication & Role-Based Access</li>
-              <li>Database Design & Optimization</li>
-              <li>Clean Code & Scalable Systems</li>
+              <li><i class="fas fa-check-circle"></i> Backend Architecture & REST APIs</li>
+              <li><i class="fas fa-check-circle"></i> Authentication & Role-Based Access</li>
+              <li><i class="fas fa-check-circle"></i> Database Design & Optimization</li>
+              <li><i class="fas fa-check-circle"></i> Clean Code & Scalable Systems</li>
             </ul>
           </div>
         </div>
@@ -149,34 +152,47 @@
 
         <div class="project-grid">
           <div class="project-card">
+            <div class="project-icon">🏥</div>
             <h3>Doctor Appointment System</h3>
             <p>
               Multi-role full-stack application with authentication and
               real-time scheduling built using React, Node.js and MongoDB.
             </p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
             <a
               href="https://github.com/AkashShettyy/DoctorAppointmentSystem.git"
               target="_blank"
             >
-              <button>View Code</button>
+              <button><i class="fab fa-github"></i> View Code</button>
             </a>
           </div>
 
           <div class="project-card">
+            <div class="project-icon">💊</div>
             <h3>Smart Care Assistant</h3>
             <p>
               Secure patient management platform with JWT authentication and
               REST APIs.
             </p>
+            <div class="project-tags">
+              <span>JWT</span>
+              <span>REST API</span>
+              <span>Security</span>
+            </div>
             <a
               href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
               target="_blank"
             >
-              <button>View Code</button>
+              <button><i class="fab fa-github"></i> View Code</button>
             </a>
           </div>
 
           <div class="project-card">
+            <div class="project-icon">🤖</div>
             <h3>AI Timetable Generator</h3>
             <p>
               Smart university scheduling platform featuring AI-powered
@@ -184,12 +200,16 @@
               synchronization, automatic conflict detection, and secure
               role-based authentication using React, Node.js and MongoDB.
             </p>
-
+            <div class="project-tags">
+              <span>AI</span>
+              <span>React</span>
+              <span>MongoDB</span>
+            </div>
             <a
               href="https://github.com/AkashShettyy/ai-Timetable-Generator"
               target="_blank"
             >
-              <button>View Code</button>
+              <button><i class="fab fa-github"></i> View Code</button>
             </a>
           </div>
         </div>
@@ -203,7 +223,7 @@
 
         <div class="contact-grid">
           <a href="mailto:akashanand2204@gmail.com" class="contact-card">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div>
               <h3>Email</h3>
               <p>akashanand2204@gmail.com</p>
@@ -215,7 +235,7 @@
             target="_blank"
             class="contact-card"
           >
-            <div class="contact-icon">💻</div>
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
             <div>
               <h3>GitHub</h3>
               <p>github.com/AkashShettyy</p>
@@ -227,7 +247,7 @@
             target="_blank"
             class="contact-card"
           >
-            <div class="contact-icon">🔗</div>
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
             <div>
               <h3>LinkedIn</h3>
               <p>Connect with me</p>

@@ -173,19 +173,34 @@
 
         <div class="project-grid">
           <div class="project-card">
-            <div class="project-icon">🏥</div>
-            <h3>Doctor Appointment System</h3>
+            <div class="project-icon">☕</div>
+            <h3>Cafe Finder</h3>
+
             <p>
-              Multi-role full-stack application with authentication and
-              real-time scheduling built using React, Node.js and MongoDB.
+              Location-based web application that helps users discover nearby
+              cafes using real-time geolocation, interactive mapping, and smart
+              radius filtering with OpenStreetMap data integration.
             </p>
+
+            <ul class="project-highlights">
+              <li>
+                Real-time geolocation tracking & radius filtering (2–10km)
+              </li>
+              <li>Interactive Leaflet.js map with custom markers</li>
+              <li>Search, sort & favorites system using localStorage</li>
+              <li>One-click Google Maps navigation integration</li>
+            </ul>
+
             <div class="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
+              <span>JavaScript</span>
+              <span>Leaflet.js</span>
+              <span>OpenStreetMap</span>
+              <span>Overpass API</span>
+              <span>LocalStorage</span>
             </div>
+
             <a
-              href="https://github.com/AkashShettyy/DoctorAppointmentSystem.git"
+              href="https://github.com/AkashShettyy/Cafe-Finder.git"
               target="_blank"
             >
               <button><i class="fab fa-github"></i> View Code</button>
@@ -195,15 +210,28 @@
           <div class="project-card">
             <div class="project-icon">💊</div>
             <h3>Smart Care Assistant</h3>
+
             <p>
-              Secure patient management platform with JWT authentication and
-              REST APIs.
+              Comprehensive healthcare management platform built with Next.js
+              and Node.js featuring secure role-based dashboards for patients,
+              doctors, and administrators.
             </p>
+
+            <ul class="project-highlights">
+              <li>Multi-role dashboards (Patient, Doctor, Admin)</li>
+              <li>JWT-based authentication & protected routes</li>
+              <li>Appointment & patient management system</li>
+              <li>Role-Based Access Control (RBAC) implementation</li>
+            </ul>
+
             <div class="project-tags">
+              <span>Next.js</span>
+              <span>Node.js</span>
               <span>JWT</span>
-              <span>REST API</span>
-              <span>Security</span>
+              <span>RBAC</span>
+              <span>MongoDB</span>
             </div>
+
             <a
               href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
               target="_blank"
@@ -215,17 +243,28 @@
           <div class="project-card">
             <div class="project-icon">🤖</div>
             <h3>AI Timetable Generator</h3>
+
             <p>
-              Smart university scheduling platform featuring AI-powered
-              timetable generation, real-time faculty availability
-              synchronization, automatic conflict detection, and secure
-              role-based authentication using React, Node.js and MongoDB.
+              Intelligent university scheduling system with AI-based faculty
+              assignment, real-time availability synchronization, and automated
+              conflict detection built using MERN stack.
             </p>
+
+            <ul class="project-highlights">
+              <li>AI-driven faculty-course matching based on expertise</li>
+              <li>Real-time sync between availability & teaching schedule</li>
+              <li>Automatic conflict detection for faculty & rooms</li>
+              <li>Multi-role dashboards (Admin, Faculty, Student)</li>
+            </ul>
+
             <div class="project-tags">
-              <span>AI</span>
               <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
               <span>MongoDB</span>
+              <span>JWT</span>
             </div>
+
             <a
               href="https://github.com/AkashShettyy/ai-Timetable-Generator"
               target="_blank"
@@ -294,7 +333,7 @@
         } else {
           sections.forEach((section) => {
             const sectionTop = section.offsetTop - 200;
-            
+
             if (scrollY >= sectionTop) {
               current = section.getAttribute("id");
             }
@@ -311,6 +350,29 @@
 
       window.addEventListener("scroll", updateActiveLink);
       window.addEventListener("load", updateActiveLink);
+
+      // Project cards scroll animation
+      const projectCards = document.querySelectorAll(".project-card");
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const projectObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("animate-in");
+            }, index * 150);
+          }
+        });
+      }, observerOptions);
+
+      projectCards.forEach((card) => {
+        card.classList.add("animate-ready");
+        projectObserver.observe(card);
+      });
     </script>
   </body>
 </html>

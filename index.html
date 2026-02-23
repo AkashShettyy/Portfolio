@@ -284,11 +284,18 @@
 
       let currentSection = "";
 
-      window.addEventListener("scroll", () => {
+      const updateActiveLink = () => {
+        const navHeight = document.querySelector("nav").offsetHeight;
+        const scrollPosition = window.scrollY + navHeight + 100;
+
         sections.forEach((section) => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.clientHeight;
-          if (window.scrollY >= sectionTop - 150) {
+
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
             currentSection = section.getAttribute("id");
           }
         });
@@ -299,7 +306,10 @@
             link.classList.add("active");
           }
         });
-      });
+      };
+
+      window.addEventListener("scroll", updateActiveLink);
+      window.addEventListener("load", updateActiveLink);
     </script>
   </body>
 </html>

@@ -173,7 +173,10 @@
 
         <div class="project-grid">
           <div class="project-card">
-            <div class="project-icon">☕</div>
+            <div class="project-image-wrapper">
+              <div class="project-icon">☕</div>
+              <div class="project-overlay"></div>
+            </div>
             <h3>Cafe Finder</h3>
 
             <p>
@@ -202,13 +205,22 @@
             <a
               href="https://github.com/AkashShettyy/Cafe-Finder.git"
               target="_blank"
+              class="project-link"
             >
-              <button><i class="fab fa-github"></i> View Code</button>
+              <button class="project-btn">
+                <span class="btn-text"
+                  ><i class="fab fa-github"></i> View Code</span
+                >
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+              </button>
             </a>
           </div>
 
           <div class="project-card">
-            <div class="project-icon">💊</div>
+            <div class="project-image-wrapper">
+              <div class="project-icon">💊</div>
+              <div class="project-overlay"></div>
+            </div>
             <h3>Smart Care Assistant</h3>
 
             <p>
@@ -235,13 +247,22 @@
             <a
               href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
               target="_blank"
+              class="project-link"
             >
-              <button><i class="fab fa-github"></i> View Code</button>
+              <button class="project-btn">
+                <span class="btn-text"
+                  ><i class="fab fa-github"></i> View Code</span
+                >
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+              </button>
             </a>
           </div>
 
           <div class="project-card">
-            <div class="project-icon">🤖</div>
+            <div class="project-image-wrapper">
+              <div class="project-icon">🤖</div>
+              <div class="project-overlay"></div>
+            </div>
             <h3>AI Timetable Generator</h3>
 
             <p>
@@ -268,8 +289,14 @@
             <a
               href="https://github.com/AkashShettyy/ai-Timetable-Generator"
               target="_blank"
+              class="project-link"
             >
-              <button><i class="fab fa-github"></i> View Code</button>
+              <button class="project-btn">
+                <span class="btn-text"
+                  ><i class="fab fa-github"></i> View Code</span
+                >
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+              </button>
             </a>
           </div>
         </div>
@@ -350,6 +377,27 @@
 
       window.addEventListener("scroll", updateActiveLink);
       window.addEventListener("load", updateActiveLink);
+
+      // Modern scroll animations for all sections
+      const animateElements = document.querySelectorAll(
+        ".about-box, .experience-card, .skill-card, .contact-card, .section-title",
+      );
+
+      const modernObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-up");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+
+      animateElements.forEach((el) => {
+        el.classList.add("animate-on-scroll");
+        modernObserver.observe(el);
+      });
 
       // Project cards scroll animation
       const projectCards = document.querySelectorAll(".project-card");

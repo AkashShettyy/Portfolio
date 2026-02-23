@@ -282,50 +282,23 @@
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll("nav a");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + entry.target.id) {
-                  link.classList.add("active");
-                }
-              });
-            }
-          });
-        },
-        {
-          threshold: 0.3,
-          rootMargin: "-20% 0px -35% 0px"
-        }
-      );
+      let currentSection = "";
 
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
-    </script>
-  </body>
-</html> IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + entry.target.id) {
-                  link.classList.add("active");
-                }
-              });
-            }
-          });
-        },
-        {
-          threshold: 0.6, // section must be 60% visible
-        },
-      );
+      window.addEventListener("scroll", () => {
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - 150) {
+            currentSection = section.getAttribute("id");
+          }
+        });
 
-      sections.forEach((section) => {
-        observer.observe(section);
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+          }
+        });
       });
     </script>
   </body>

@@ -282,27 +282,22 @@
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll("nav a");
 
-      let currentSection = "";
-
       const updateActiveLink = () => {
-        const navHeight = document.querySelector("nav").offsetHeight;
-        const scrollPosition = window.scrollY + navHeight + 100;
+        let current = "home";
+        const scrollY = window.pageYOffset;
 
         sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
+          const sectionTop = section.offsetTop - 200;
           const sectionHeight = section.clientHeight;
-
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            currentSection = section.getAttribute("id");
+          
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
           }
         });
 
         navLinks.forEach((link) => {
           link.classList.remove("active");
-          if (link.getAttribute("href") === "#" + currentSection) {
+          if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
           }
         });

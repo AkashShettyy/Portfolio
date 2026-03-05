@@ -385,7 +385,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>© <span id="year"></span> Akash N. Built with intent and clean code.</p>
-        <a href="#top">Back to top</a>
+        <a href="#top" id="back-to-top">Back to top</a>
       </div>
     </footer>
 
@@ -393,6 +393,7 @@
       const header = document.querySelector('.site-header');
       const menuToggle = document.querySelector('.menu-toggle');
       const menu = document.querySelector('.menu');
+      const backToTop = document.getElementById('back-to-top');
       const navLinks = document.querySelectorAll('.menu a[href^="#"]');
       const sections = document.querySelectorAll('main section[id]');
       const revealItems = document.querySelectorAll('.reveal');
@@ -408,6 +409,11 @@
           menu.classList.remove('open');
           menuToggle.setAttribute('aria-expanded', 'false');
         });
+      });
+
+      backToTop.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
       const updateScrollState = () => {

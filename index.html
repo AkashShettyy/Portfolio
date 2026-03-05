@@ -2,442 +2,457 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Akash N | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Akash N - Software Developer Apprentice building secure and scalable full-stack applications with React, Node.js, and Spring Boot."
+    />
+    <title>Akash N | Software Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div class="bg-orb"></div>
-    <div class="bg-orb2"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav>
-      <h2><a href="#home" class="logo">Akash N</a></h2>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="bg-mesh"></div>
+    <div class="bg-glow bg-glow-top"></div>
+    <div class="bg-glow bg-glow-bottom"></div>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container">
-        <h1 class="hero-title reveal-delay-1">Hi, I'm <span>Akash N</span></h1>
-        <p class="hero-subtitle reveal-delay-2">
-          Software Developer Apprentice building secure, scalable full-stack
-          applications using React, Node.js and Spring Boot.
-        </p>
-        <div class="hero-highlights reveal-delay-3">
-          <span><i class="fas fa-briefcase"></i> CBA Apprentice</span>
-          <span><i class="fas fa-layer-group"></i> MERN + Spring Boot</span>
-          <span><i class="fas fa-shield-alt"></i> Secure API Development</span>
-        </div>
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Primary">
+        <a href="#top" class="brand">Akash N</a>
 
-        <div class="hero-buttons reveal-delay-4">
-          <a href="#projects"
-            ><button><i class="fas fa-code"></i> View Projects</button></a
-          >
-          <a href="#contact"
-            ><button class="secondary">
-              <i class="fas fa-envelope"></i> Contact Me
-            </button></a
-          >
-        </div>
-      </div>
-    </section>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <ul id="menu" class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="menu-cta" href="mailto:akashanand2204@gmail.com?subject=Resume%20Request">
+              Request Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="about-grid">
-          <div class="about-box">
-            <div class="about-icon">👨‍💻</div>
-            <h3>Profile</h3>
-            <p>
-              Software Developer Apprentice building secure and scalable
-              full-stack applications using React, Node.js and Spring Boot.
-            </p>
-          </div>
-
-          <div class="about-box">
-            <div class="about-icon">🎯</div>
-            <h3>Core Focus</h3>
-            <ul class="about-list">
-              <li>
-                <i class="fas fa-check-circle"></i> Backend Architecture & REST
-                APIs
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Authentication & Role-Based
-                Access
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Database Design &
-                Optimization
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Clean Code & Scalable
-                Systems
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="experience-card">
-          <h3>Software Developer Apprentice</h3>
-          <p class="experience-company">Commonwealth Bank of Australia</p>
-          <p class="experience-date">Jan 2026 – Present</p>
-
-          <ul class="experience-list">
-            <li>Working with real-world development workflows</li>
-            <li>Understanding application architecture & debugging</li>
-            <li>Collaborating using Git and version control tools</li>
-            <li>Learning deployment & production practices</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills-category">
-          <h3>Languages</h3>
-          <div class="skills-grid">
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Java</div>
-            <div class="skill-card">Python</div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Frontend</h3>
-          <div class="skills-grid">
-            <div class="skill-card">React.js</div>
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">Tailwind CSS</div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Backend</h3>
-          <div class="skills-grid">
-            <div class="skill-card">Node.js</div>
-            <div class="skill-card">Express.js</div>
-            <div class="skill-card">REST API Development</div>
-            <div class="skill-card">Authentication & Authorization (JWT)</div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Database</h3>
-          <div class="skills-grid">
-            <div class="skill-card">MongoDB</div>
-            <div class="skill-card">Mongoose</div>
-            <div class="skill-card">MySQL</div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Tools</h3>
-          <div class="skills-grid">
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-            <div class="skill-card">Postman</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="project-grid">
-          <div class="project-card">
-            <div class="project-image-wrapper">
-              <div class="project-icon">☕</div>
-              <div class="project-overlay"></div>
-            </div>
-            <h3>Cafe Finder</h3>
-
-            <p>
-              Location-based web application that helps users discover nearby
-              cafes using real-time geolocation, interactive mapping, and smart
-              radius filtering with OpenStreetMap data integration.
+    <main id="main">
+      <section class="hero section" id="home">
+        <div class="container hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Software Developer Apprentice</p>
+            <h1>Building reliable full-stack products with security and scale in mind.</h1>
+            <p class="hero-lead">
+              I develop practical web applications using React, Node.js, and Spring Boot,
+              focusing on clean architecture, role-based access, and maintainable APIs.
             </p>
 
-            <ul class="project-highlights">
-              <li>
-                Real-time geolocation tracking & radius filtering (2–10km)
-              </li>
-              <li>Interactive Leaflet.js map with custom markers</li>
-              <li>Search, sort & favorites system using localStorage</li>
-              <li>One-click Google Maps navigation integration</li>
-            </ul>
-
-            <div class="project-tags">
-              <span>JavaScript</span>
-              <span>Leaflet.js</span>
-              <span>OpenStreetMap</span>
-              <span>Overpass API</span>
-              <span>LocalStorage</span>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">
+                <i class="fas fa-code"></i>
+                View Projects
+              </a>
+              <a class="btn btn-ghost" href="#contact">
+                <i class="fas fa-paper-plane"></i>
+                Work With Me
+              </a>
             </div>
+
+            <div class="hero-metrics">
+              <article>
+                <h3>3+</h3>
+                <p>Production-style projects</p>
+              </article>
+              <article>
+                <h3>MERN</h3>
+                <p>Primary development stack</p>
+              </article>
+              <article>
+                <h3>RBAC</h3>
+                <p>Security-first application design</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal delay-1" aria-label="Professional Snapshot">
+            <h2>Current Focus</h2>
+            <ul>
+              <li>
+                <i class="fas fa-shield-halved"></i>
+                <div>
+                  <h3>Secure Backends</h3>
+                  <p>JWT auth, role-based access, and protected routes</p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-database"></i>
+                <div>
+                  <h3>Data Systems</h3>
+                  <p>Schema design, query optimization, and maintainable models</p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-people-group"></i>
+                <div>
+                  <h3>Team Workflow</h3>
+                  <p>Git collaboration, code review, and iterative delivery</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">About</p>
+            <h2>Engineer profile</h2>
+          </header>
+
+          <div class="about-grid">
+            <article class="glass-card reveal">
+              <i class="fas fa-user-tie card-icon"></i>
+              <h3>Profile</h3>
+              <p>
+                I am a software developer apprentice who builds robust full-stack applications
+                and enjoys turning complex ideas into clean, usable products.
+              </p>
+            </article>
+
+            <article class="glass-card reveal delay-1">
+              <i class="fas fa-crosshairs card-icon"></i>
+              <h3>Core Focus</h3>
+              <ul class="focus-list">
+                <li><i class="fas fa-check"></i> Backend architecture and REST APIs</li>
+                <li><i class="fas fa-check"></i> Authentication and role-based access</li>
+                <li><i class="fas fa-check"></i> Database structure and performance</li>
+                <li><i class="fas fa-check"></i> Scalable and readable codebases</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Experience</p>
+            <h2>Professional journey</h2>
+          </header>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div>
+              <h3>Software Developer Apprentice</h3>
+              <p class="timeline-company">Commonwealth Bank of Australia</p>
+              <p class="timeline-date">January 2026 - Present</p>
+              <ul>
+                <li>Applied real-world software development workflows and best practices</li>
+                <li>Worked on debugging and understanding layered application architecture</li>
+                <li>Collaborated with Git-based version control and team branching workflows</li>
+                <li>Learned practical deployment and production-readiness fundamentals</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Skills</p>
+            <h2>Technical toolkit</h2>
+          </header>
+
+          <div class="skill-groups">
+            <article class="skill-group reveal">
+              <h3>Languages</h3>
+              <div class="chip-grid">
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>Python</span>
+              </div>
+            </article>
+
+            <article class="skill-group reveal delay-1">
+              <h3>Frontend</h3>
+              <div class="chip-grid">
+                <span>React.js</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Tailwind CSS</span>
+              </div>
+            </article>
+
+            <article class="skill-group reveal">
+              <h3>Backend</h3>
+              <div class="chip-grid">
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>REST APIs</span>
+                <span>JWT Auth</span>
+              </div>
+            </article>
+
+            <article class="skill-group reveal delay-1">
+              <h3>Database & Tools</h3>
+              <div class="chip-grid">
+                <span>MongoDB</span>
+                <span>Mongoose</span>
+                <span>MySQL</span>
+                <span>Git / GitHub</span>
+                <span>Postman</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Projects</p>
+            <h2>Selected work</h2>
+          </header>
+
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-head">
+                <div class="project-icon"><i class="fas fa-mug-hot"></i></div>
+                <h3>Cafe Finder</h3>
+              </div>
+              <p>
+                Location-based web app for discovering nearby cafes with geolocation,
+                radius filtering, and OpenStreetMap data integration.
+              </p>
+              <ul>
+                <li>Real-time location with configurable search radius</li>
+                <li>Interactive Leaflet maps with custom markers</li>
+                <li>Search, sorting, and favorites via localStorage</li>
+              </ul>
+              <div class="tag-row">
+                <span>JavaScript</span>
+                <span>Leaflet.js</span>
+                <span>OpenStreetMap</span>
+                <span>Overpass API</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/AkashShettyy/Cafe-Finder.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Code</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <article class="project-card reveal delay-1">
+              <div class="project-head">
+                <div class="project-icon"><i class="fas fa-notes-medical"></i></div>
+                <h3>Smart Care Assistant</h3>
+              </div>
+              <p>
+                Healthcare platform with secure multi-role dashboards for patients,
+                doctors, and administrators.
+              </p>
+              <ul>
+                <li>Role-specific workflows and protected routes</li>
+                <li>JWT authentication and RBAC authorization</li>
+                <li>Appointment and patient management modules</li>
+              </ul>
+              <div class="tag-row">
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>JWT</span>
+                <span>MongoDB</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Code</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Timetable Generator</h3>
+              </div>
+              <p>
+                University scheduling system with intelligent faculty assignment,
+                real-time availability sync, and automated conflict detection.
+              </p>
+              <ul>
+                <li>Faculty-course matching with rule-based intelligence</li>
+                <li>Automatic timetable conflict detection</li>
+                <li>Admin, faculty, and student role support</li>
+              </ul>
+              <div class="tag-row">
+                <span>React</span>
+                <span>Express</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/AkashShettyy/ai-Timetable-Generator"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Code</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Contact</p>
+            <h2>Let’s build something useful</h2>
+          </header>
+
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="mailto:akashanand2204@gmail.com">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>akashanand2204@gmail.com</p>
+              </div>
+            </a>
 
             <a
-              href="https://github.com/AkashShettyy/Cafe-Finder.git"
+              class="contact-card reveal delay-1"
+              href="https://github.com/AkashShettyy"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-link"
             >
-              <button class="project-btn">
-                <span class="btn-text"
-                  ><i class="fab fa-github"></i> View Code</span
-                >
-                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-              </button>
+              <i class="fab fa-github"></i>
+              <div>
+                <h3>GitHub</h3>
+                <p>github.com/AkashShettyy</p>
+              </div>
             </a>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image-wrapper">
-              <div class="project-icon">💊</div>
-              <div class="project-overlay"></div>
-            </div>
-            <h3>Smart Care Assistant</h3>
-
-            <p>
-              Comprehensive healthcare management platform built with Next.js
-              and Node.js featuring secure role-based dashboards for patients,
-              doctors, and administrators.
-            </p>
-
-            <ul class="project-highlights">
-              <li>Multi-role dashboards (Patient, Doctor, Admin)</li>
-              <li>JWT-based authentication & protected routes</li>
-              <li>Appointment & patient management system</li>
-              <li>Role-Based Access Control (RBAC) implementation</li>
-            </ul>
-
-            <div class="project-tags">
-              <span>Next.js</span>
-              <span>Node.js</span>
-              <span>JWT</span>
-              <span>RBAC</span>
-              <span>MongoDB</span>
-            </div>
 
             <a
-              href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
+              class="contact-card reveal"
+              href="https://www.linkedin.com/in/akash-n-729a6b2b1/"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-link"
             >
-              <button class="project-btn">
-                <span class="btn-text"
-                  ><i class="fab fa-github"></i> View Code</span
-                >
-                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-              </button>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image-wrapper">
-              <div class="project-icon">🤖</div>
-              <div class="project-overlay"></div>
-            </div>
-            <h3>AI Timetable Generator</h3>
-
-            <p>
-              Intelligent university scheduling system with AI-based faculty
-              assignment, real-time availability synchronization, and automated
-              conflict detection built using MERN stack.
-            </p>
-
-            <ul class="project-highlights">
-              <li>AI-driven faculty-course matching based on expertise</li>
-              <li>Real-time sync between availability & teaching schedule</li>
-              <li>Automatic conflict detection for faculty & rooms</li>
-              <li>Multi-role dashboards (Admin, Faculty, Student)</li>
-            </ul>
-
-            <div class="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>MongoDB</span>
-              <span>JWT</span>
-            </div>
-
-            <a
-              href="https://github.com/AkashShettyy/ai-Timetable-Generator"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-            >
-              <button class="project-btn">
-                <span class="btn-text"
-                  ><i class="fab fa-github"></i> View Code</span
-                >
-                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-              </button>
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h3>LinkedIn</h3>
+                <p>Connect professionally</p>
+              </div>
             </a>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Akash N. Built with intent and clean code.</p>
+        <a href="#top">Back to top</a>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact-grid">
-          <a href="mailto:akashanand2204@gmail.com" class="contact-card">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <h3>Email</h3>
-              <p>akashanand2204@gmail.com</p>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/AkashShettyy"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-card"
-          >
-            <div class="contact-icon"><i class="fab fa-github"></i></div>
-            <div>
-              <h3>GitHub</h3>
-              <p>github.com/AkashShettyy</p>
-            </div>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/akash-n-729a6b2b1/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-card"
-          >
-            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-            <div>
-              <h3>LinkedIn</h3>
-              <p>Connect with me</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+    </footer>
 
     <script>
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("nav a");
-      const nav = document.querySelector("nav");
+      const header = document.querySelector('.site-header');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+      const navLinks = document.querySelectorAll('.menu a[href^="#"]');
+      const sections = document.querySelectorAll('main section[id]');
+      const revealItems = document.querySelectorAll('.reveal');
 
-      const updateActiveLink = () => {
-        let current = "home";
-        const scrollY = window.pageYOffset;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
 
-        // Check if at bottom of page
-        if (scrollY + windowHeight >= documentHeight - 50) {
-          current = "contact";
-        } else {
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 200;
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
 
-            if (scrollY >= sectionTop) {
-              current = section.getAttribute("id");
-            }
-          });
-        }
+      const updateScrollState = () => {
+        header.classList.toggle('scrolled', window.scrollY > 12);
+      };
+
+      const setActiveLink = () => {
+        let current = 'home';
+        const top = window.scrollY + 180;
+
+        sections.forEach((section) => {
+          if (top >= section.offsetTop) {
+            current = section.id;
+          }
+        });
 
         navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-          }
+          link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
       };
 
-      window.addEventListener("scroll", updateActiveLink);
-      window.addEventListener("scroll", () => {
-        nav.classList.toggle("scrolled", window.scrollY > 18);
-      });
-      window.addEventListener("load", () => {
-        updateActiveLink();
-        nav.classList.toggle("scrolled", window.scrollY > 18);
-      });
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
 
-      // Modern scroll animations for all sections
-      const animateElements = document.querySelectorAll(
-        ".about-box, .experience-card, .skill-card, .contact-card, .section-title",
-      );
-
-      const modernObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("fade-in-up");
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
-      );
-
-      animateElements.forEach((el) => {
-        el.classList.add("animate-on-scroll");
-        modernObserver.observe(el);
-      });
-
-      // Project cards scroll animation
-      const projectCards = document.querySelectorAll(".project-card");
-
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
-      };
-
-      const projectObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("animate-in");
-            }, index * 150);
-          }
-        });
-      }, observerOptions);
-
-      projectCards.forEach((card) => {
-        card.classList.add("animate-ready");
-        projectObserver.observe(card);
+      document.getElementById('year').textContent = new Date().getFullYear();
+      updateScrollState();
+      setActiveLink();
+      window.addEventListener('scroll', () => {
+        updateScrollState();
+        setActiveLink();
       });
     </script>
   </body>

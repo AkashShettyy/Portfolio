@@ -45,6 +45,13 @@ nav {
   border-bottom: 1px solid rgba(59, 130, 246, 0.1);
   z-index: 1000;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: padding 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+nav.scrolled {
+  padding: 14px 80px;
+  background: rgba(10, 14, 26, 0.92);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.5);
 }
 
 nav ul {
@@ -159,9 +166,67 @@ section {
   font-weight: 500;
 }
 
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.hero-highlights span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #dbeafe;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.hero-highlights i {
+  color: #60a5fa;
+}
+
 .hero-buttons {
   display: flex;
   gap: 20px;
+}
+
+.hero-title,
+.hero-subtitle,
+.hero-highlights,
+.hero-buttons {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.25s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.4s;
+}
+
+.reveal-delay-4 {
+  animation-delay: 0.55s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 button {
@@ -203,6 +268,13 @@ button:first-child:hover {
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
 /* ===== EXPERIENCE ===== */
@@ -748,6 +820,10 @@ button:first-child:hover {
     gap: 15px;
   }
 
+  nav.scrolled {
+    padding: 12px 20px;
+  }
+
   nav ul {
     flex-direction: row;
     gap: 15px;
@@ -777,6 +853,11 @@ button:first-child:hover {
   .hero p {
     font-size: 16px;
     margin-bottom: 30px;
+  }
+
+  .hero-highlights {
+    justify-content: center;
+    margin-bottom: 24px;
   }
 
   .hero-buttons {
@@ -905,5 +986,15 @@ button:first-child:hover {
   .bg-orb2 {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

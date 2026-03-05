@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <title>Akash N | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,13 +33,18 @@
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="container">
-        <h1>Hi, I'm <span>Akash N</span></h1>
-        <p>
+        <h1 class="hero-title reveal-delay-1">Hi, I'm <span>Akash N</span></h1>
+        <p class="hero-subtitle reveal-delay-2">
           Software Developer Apprentice building secure, scalable full-stack
           applications using React, Node.js and Spring Boot.
         </p>
+        <div class="hero-highlights reveal-delay-3">
+          <span><i class="fas fa-briefcase"></i> CBA Apprentice</span>
+          <span><i class="fas fa-layer-group"></i> MERN + Spring Boot</span>
+          <span><i class="fas fa-shield-alt"></i> Secure API Development</span>
+        </div>
 
-        <div class="hero-buttons">
+        <div class="hero-buttons reveal-delay-4">
           <a href="#projects"
             ><button><i class="fas fa-code"></i> View Projects</button></a
           >
@@ -205,6 +211,7 @@
             <a
               href="https://github.com/AkashShettyy/Cafe-Finder.git"
               target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
             >
               <button class="project-btn">
@@ -247,6 +254,7 @@
             <a
               href="https://github.com/AkashShettyy/Smart-Care-Assistant.git"
               target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
             >
               <button class="project-btn">
@@ -289,6 +297,7 @@
             <a
               href="https://github.com/AkashShettyy/ai-Timetable-Generator"
               target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
             >
               <button class="project-btn">
@@ -320,6 +329,7 @@
           <a
             href="https://github.com/AkashShettyy"
             target="_blank"
+            rel="noopener noreferrer"
             class="contact-card"
           >
             <div class="contact-icon"><i class="fab fa-github"></i></div>
@@ -332,6 +342,7 @@
           <a
             href="https://www.linkedin.com/in/akash-n-729a6b2b1/"
             target="_blank"
+            rel="noopener noreferrer"
             class="contact-card"
           >
             <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
@@ -347,6 +358,7 @@
     <script>
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll("nav a");
+      const nav = document.querySelector("nav");
 
       const updateActiveLink = () => {
         let current = "home";
@@ -376,7 +388,13 @@
       };
 
       window.addEventListener("scroll", updateActiveLink);
-      window.addEventListener("load", updateActiveLink);
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 18);
+      });
+      window.addEventListener("load", () => {
+        updateActiveLink();
+        nav.classList.toggle("scrolled", window.scrollY > 18);
+      });
 
       // Modern scroll animations for all sections
       const animateElements = document.querySelectorAll(

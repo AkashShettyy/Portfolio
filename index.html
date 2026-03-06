@@ -7,6 +7,14 @@
       name="description"
       content="Akash N - Software Developer Apprentice building secure and scalable full-stack applications with React, Node.js, and Express."
     />
+    <script>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <title>Akash N | Software Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,6 +58,16 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Switch to dark mode"
+              title="Toggle theme"
+            >
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
           <li>
             <a
               class="menu-cta"
@@ -439,6 +457,7 @@
       const menuToggle = document.querySelector(".menu-toggle");
       const menu = document.querySelector(".menu");
       const backToTop = document.getElementById("back-to-top");
+      const themeToggle = document.querySelector(".theme-toggle");
       const navLinks = document.querySelectorAll('.menu a[href^="#"]');
       const sections = document.querySelectorAll("main section[id]");
       const revealItems = document.querySelectorAll(".reveal");
@@ -483,6 +502,25 @@
         });
       };
 
+      const applyTheme = (theme) => {
+        const isDark = theme === "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        themeToggle.innerHTML = isDark
+          ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+          : '<i class="fas fa-moon" aria-hidden="true"></i>';
+        themeToggle.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
+      };
+
+      themeToggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") || "light";
+        const next = current === "dark" ? "light" : "dark";
+        applyTheme(next);
+        localStorage.setItem("theme", next);
+      });
+
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
@@ -504,6 +542,7 @@
       }
 
       document.getElementById("year").textContent = new Date().getFullYear();
+      applyTheme(document.documentElement.getAttribute("data-theme") || "light");
       updateScrollState();
       setActiveLink();
       let ticking = false;

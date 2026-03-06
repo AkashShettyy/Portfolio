@@ -16,6 +16,7 @@
   --radius-md: 12px;
   --radius-sm: 10px;
   --max-width: 1140px;
+  --easing-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -156,12 +157,33 @@ a {
   padding: 9px 14px;
   border-radius: 999px;
   transition: color 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s var(--easing-smooth);
 }
 
 .menu a:hover,
 .menu a.active {
   color: var(--brand-strong);
   background: #deebf8;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+  transform: scaleX(1);
 }
 
 .menu-cta {
@@ -266,7 +288,8 @@ a {
   font-weight: 700;
   font-size: 0.95rem;
   border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.24s var(--easing-smooth), box-shadow 0.24s var(--easing-smooth),
+    background 0.2s ease;
 }
 
 .btn:hover {
@@ -558,12 +581,14 @@ a {
   padding: 10px 12px;
   font-weight: 700;
   color: var(--brand-strong);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.24s var(--easing-smooth), background 0.2s ease,
+    box-shadow 0.24s var(--easing-smooth);
 }
 
 .project-link:hover {
   transform: translateY(-2px);
   background: #e3eef9;
+  box-shadow: 0 10px 20px rgba(13, 34, 62, 0.12);
 }
 
 .contact-grid {
@@ -623,8 +648,8 @@ a {
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
+  transition: opacity 0.4s var(--easing-smooth), transform 0.4s var(--easing-smooth);
 }
 
 .reveal.is-visible {
@@ -632,8 +657,12 @@ a {
   transform: translateY(0);
 }
 
+.reveal-up {
+  transform: translateY(16px);
+}
+
 .delay-1 {
-  transition-delay: 0.12s;
+  transition-delay: 0.07s;
 }
 
 .hero-copy,
@@ -641,20 +670,13 @@ a {
 .glass-card,
 .timeline-card,
 .skill-group,
-.project-card,
-.contact-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.project-card {
+  transition: transform 0.24s var(--easing-smooth), box-shadow 0.24s var(--easing-smooth);
 }
 
-.hero-copy:hover,
-.hero-panel:hover,
-.glass-card:hover,
-.timeline-card:hover,
-.skill-group:hover,
-.project-card:hover,
-.contact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(13, 34, 62, 0.12);
 }
 
 a:focus-visible,
@@ -771,4 +793,5 @@ button:focus-visible {
     opacity: 1 !important;
     transform: none !important;
   }
+
 }

@@ -9,12 +9,19 @@
     />
     <script>
       (() => {
-        const saved = localStorage.getItem("theme");
         const prefersDark = window.matchMedia(
           "(prefers-color-scheme: dark)",
         ).matches;
-        const theme = saved || (prefersDark ? "dark" : "light");
-        document.documentElement.setAttribute("data-theme", theme);
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {
+          saved = null;
+        }
+        document.documentElement.setAttribute(
+          "data-theme",
+          saved || (prefersDark ? "dark" : "light"),
+        );
       })();
     </script>
     <title>Akash N | Software Developer Portfolio</title>
@@ -71,7 +78,9 @@
             </button>
           </li>
           <li>
-            <a class="menu-cta" href="resume.pdf" download> Download Resume </a>
+            <a class="menu-cta" href="/resume.pdf" download="Akash_Resume.pdf">
+              Download Resume
+            </a>
           </li>
         </ul>
       </nav>
@@ -95,8 +104,8 @@
             <div class="hero-actions">
               <a
                 class="btn btn-resume"
-                href="/Users/akash/Desktop/imp/Akash_Resume.pdf"
-                download
+                href="/resume.pdf"
+                download="Akash_Resume.pdf"
               >
                 <i class="fas fa-file-arrow-down"></i>
                 Download Resume
@@ -510,6 +519,7 @@
       };
 
       const applyTheme = (theme) => {
+        if (!themeToggle) return;
         const isDark = theme === "dark";
         document.documentElement.setAttribute("data-theme", theme);
         themeToggle.innerHTML = isDark
@@ -521,13 +531,19 @@
         );
       };
 
-      themeToggle.addEventListener("click", () => {
-        const current =
-          document.documentElement.getAttribute("data-theme") || "light";
-        const next = current === "dark" ? "light" : "dark";
-        applyTheme(next);
-        localStorage.setItem("theme", next);
-      });
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current =
+            document.documentElement.getAttribute("data-theme") || "light";
+          const next = current === "dark" ? "light" : "dark";
+          applyTheme(next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch {
+            // ignore storage failures in restricted browser modes
+          }
+        });
+      }
 
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",

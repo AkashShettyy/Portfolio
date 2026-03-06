@@ -364,6 +364,26 @@ html[data-theme="dark"] .theme-toggle:hover {
   background: var(--brand-strong);
 }
 
+.btn-resume {
+  background: #dff1e7;
+  color: #0a4f3f;
+  border-color: #bde3d2;
+}
+
+.btn-resume:hover {
+  background: #cde9db;
+}
+
+html[data-theme="dark"] .btn-primary {
+  background: #4f9fe3;
+  color: #061628;
+  box-shadow: 0 10px 20px rgba(3, 10, 20, 0.4);
+}
+
+html[data-theme="dark"] .btn-primary:hover {
+  background: #69b2ef;
+}
+
 .btn-ghost {
   background: rgba(255, 255, 255, 0.78);
   border-color: #c7d9eb;
@@ -372,6 +392,26 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 .btn-ghost:hover {
   background: #edf5fc;
+}
+
+html[data-theme="dark"] .btn-ghost {
+  background: #1a2b42;
+  border-color: #365173;
+  color: #e7f1fb;
+}
+
+html[data-theme="dark"] .btn-ghost:hover {
+  background: #223754;
+}
+
+html[data-theme="dark"] .btn-resume {
+  background: #173428;
+  color: #bce8d5;
+  border-color: #285243;
+}
+
+html[data-theme="dark"] .btn-resume:hover {
+  background: #1d4132;
 }
 
 .hero-metrics {

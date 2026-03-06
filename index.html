@@ -10,7 +10,9 @@
     <script>
       (() => {
         const saved = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
         const theme = saved || (prefersDark ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", theme);
       })();
@@ -69,12 +71,7 @@
             </button>
           </li>
           <li>
-            <a
-              class="menu-cta"
-              href="mailto:akashanand2204@gmail.com?subject=Resume%20Request"
-            >
-              Request Resume
-            </a>
+            <a class="menu-cta" href="resume.pdf" download> Download Resume </a>
           </li>
         </ul>
       </nav>
@@ -96,6 +93,14 @@
             </p>
 
             <div class="hero-actions">
+              <a
+                class="btn btn-resume"
+                href="/Users/akash/Desktop/imp/Akash_Resume.pdf"
+                download
+              >
+                <i class="fas fa-file-arrow-down"></i>
+                Download Resume
+              </a>
               <a class="btn btn-primary" href="#projects">
                 <i class="fas fa-code"></i>
                 View Projects
@@ -294,7 +299,9 @@
           </header>
 
           <div class="projects-grid">
-            <article class="project-card project-card-featured reveal reveal-up">
+            <article
+              class="project-card project-card-featured reveal reveal-up"
+            >
               <div class="project-head">
                 <div class="project-icon"><i class="fas fa-mug-hot"></i></div>
                 <h3>Cafe Finder</h3>
@@ -515,7 +522,8 @@
       };
 
       themeToggle.addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("data-theme") || "light";
+        const current =
+          document.documentElement.getAttribute("data-theme") || "light";
         const next = current === "dark" ? "light" : "dark";
         applyTheme(next);
         localStorage.setItem("theme", next);
@@ -542,7 +550,9 @@
       }
 
       document.getElementById("year").textContent = new Date().getFullYear();
-      applyTheme(document.documentElement.getAttribute("data-theme") || "light");
+      applyTheme(
+        document.documentElement.getAttribute("data-theme") || "light",
+      );
       updateScrollState();
       setActiveLink();
       let ticking = false;
